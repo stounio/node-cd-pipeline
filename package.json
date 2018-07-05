@@ -7,5 +7,6 @@
     "test": "test"
   },
   "author": "Guillaume Pichot",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": "github:stounio/node-cd-pipeline"
 }
