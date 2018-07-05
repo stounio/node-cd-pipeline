@@ -1,4 +1,4 @@
-# Docker file for building a jenkins image for Continuous Delivery Pipeline for a Node.js Application
+# Docker file for building a Jenkins image for Continuous Delivery Pipeline for a Node.js Application
 FROM jenkins/jenkins
 
 # Install Node.js
@@ -11,6 +11,11 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | bash - && \
 # Confirm Node.js installation
 RUN node -v
 RUN npm -v
+
+# Install Jenkins Plugins
+USER jenkins
+COPY jenkins-plugins.txt /usr/share/jenkins/ref/
+RUN /usr/local/bin/plugins.sh /usr/share/jenkins/ref/jenkins-plugins.txt
 
 # Bypass Jenkins setup wizard
 ENV JAVA_OPTS -Djenkins.install.runSetupWizard=false
