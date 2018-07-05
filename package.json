@@ -4,9 +4,16 @@
   "description": "Dummy application to demonstrate continuous delivery of a Node application",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "node index.js"
   },
   "author": "Guillaume Pichot",
   "license": "ISC",
-  "repository": "github:stounio/node-cd-pipeline"
+  "repository": "github:stounio/node-cd-pipeline",
+  "dependencies": {
+    "require": "^2.4.20"
+  },
+  "devDependencies": {
+    "jshint": "^2.9.5"
+  }
 }
