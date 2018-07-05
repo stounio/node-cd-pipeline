@@ -4,7 +4,7 @@
   "description": "Dummy application to demonstrate continuous delivery of a Node application",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "mocha src/test/javascript/hello-test.js",
     "start": "node index.js"
   },
   "author": "Guillaume Pichot",
@@ -14,6 +14,7 @@
     "require": "^2.4.20"
   },
   "devDependencies": {
-    "jshint": "^2.9.5"
+    "jshint": "^2.9.5",
+    "mocha": "^5.2.0"
   }
 }
