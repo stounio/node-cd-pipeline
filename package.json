@@ -1,6 +1,6 @@
 {
   "name": "dummy-app",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Dummy application to demonstrate continuous delivery of a Node application",
   "main": "index.js",
   "scripts": {
