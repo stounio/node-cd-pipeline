@@ -33,9 +33,9 @@ npm start
 The docker image is described in docker/Dockerfile and based on Jenkins Community Docker image.
 The image will run Jenkins, with Node.js and NPM installed. It will also have the jenkins plugins specified in jenkins-plugins.txt file installed and the jenkins jobs restored from there configuration. This should require minimum configuration effort of Jenkins to get the CD pipeline up and running.
 
-* Build the image (without cache):
+* Build the image (without cache) from folder _docker/_:
 ```
-docker build --no-cache -t jenkins-nodejs docker/
+docker build --no-cache -t jenkins-nodejs .
 ```
 
 * Run the image (detached mode and automatic restart):
