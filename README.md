@@ -48,9 +48,10 @@ docker run -d --restart always -p 8080:8080 -p 50000:50000 jenkins-nodejs
 ..* Pipeline Plugin
 ..* Git Plugin
 ..* GitHub
+..* SSH Agent
 
 * Configure credentials for connecting to git repository (e.g. ssh) with ID GIT_CREDENTIALS.
-* Configure global Git username and email in Manage Jenkins/Configure System.
+* Configure global environment variables GIT_USERNAME and GIT_EMAIL that will be used for setting up the Git repository.
 
 ### Tips for Jenkins
 * List Jenkins Plugins using a script from _http://{jenkins-host}/script_
