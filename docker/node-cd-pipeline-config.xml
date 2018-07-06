@@ -1,16 +1,10 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<flow-definition plugin="workflow-job@2.14.1">
-  <actions>
-    <io.jenkins.blueocean.service.embedded.BlueOceanUrlAction plugin="blueocean-rest-impl@1.1.6">
-      <blueOceanUrlObject class="io.jenkins.blueocean.service.embedded.BlueOceanUrlObjectImpl">
-        <mappedUrl>blue/organizations/jenkins/node-cd-pipeline</mappedUrl>
-      </blueOceanUrlObject>
-    </io.jenkins.blueocean.service.embedded.BlueOceanUrlAction>
-  </actions>
+<flow-definition plugin="workflow-job@2.22">
+  <actions/>
   <description>Continuous Delivery Pipeline for Node.js Application.</description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.28.0">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.2">
       <projectUrl>https://github.com/stounio/node-cd-pipeline/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -18,12 +12,12 @@
       <triggers/>
     </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
   </properties>
-  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.39">
-    <scm class="hudson.plugins.git.GitSCM" plugin="git@3.5.1">
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps@2.54">
+    <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
       <configVersion>2</configVersion>
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
-          <url>git@github.com:stounio/node-lib-cd-sample.git</url>
+          <url>git@github.com:stounio/node-cd-pipeline.git</url>
           <credentialsId>GIT_CREDENTIALS</credentialsId>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
