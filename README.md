@@ -2,8 +2,8 @@
 Continuous Delivery Pipeline for Node.js Application
 
 ## Requirements
-* Node.js version v6.11.2
-* NPM version 3.10.10
+* Node.js version v8.11.3
+* NPM version 5.6.0
 * Mocha version 3.5.0
 
 
