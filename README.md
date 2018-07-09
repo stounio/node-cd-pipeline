@@ -49,9 +49,12 @@ docker run -d --restart always -p 8080:8080 -p 50000:50000 jenkins-nodejs
 ..* Git Plugin
 ..* GitHub
 ..* SSH Agent
+..* Config File Provider
+..* Pipeline NPM Integration
 
 * Configure credentials for connecting to git repository (e.g. ssh) with ID GIT_CREDENTIALS.
 * Configure global environment variables GIT_USERNAME and GIT_EMAIL that will be used for setting up the Git repository.
+* Configure Custom Configuration file NPM_CONFIG that contains the credentials for authenticating to NPM registry.
 
 ### Tips for Jenkins
 * List Jenkins Plugins using a script from _http://{jenkins-host}/script_
@@ -65,3 +68,16 @@ Jenkins.instance.pluginManager.plugins.each{
 
 * Access Job Configuration from _http://{jenkins-host}/{job-name}/config.xml_
 > Copy the configuration files to docker/{job-name}-config.xml so that the jobs are restored when creating the docker image.
+
+### Tips for Authenticating to NPM registry
+Publishing a new version of a Node.js application to a NPM registry requires authenticating the user with a token using the _addUser_ command which will update the _.npmrc_ file with the registry and authentication token.
+```
+# Connect to the docker container
+docker exec -it {containerId} /bin/bash
+
+# Add the NPM user
+npm addUser --always-auth=true --registry={registry URL (.e.g https://registry.npmjs.org/)}
+
+# Content of the .npmrc file
+cat .npmrc
+```

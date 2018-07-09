@@ -1,7 +1,7 @@
-# Docker file for building a jenkins image for Continuous Delivery Pipeline for a Node.js package
+# Docker file for building a Jenkins image for Continuous Delivery Pipeline for a Node.js package
 FROM jenkins/jenkins
 
-# Install Node.js
+# Install Node.js version 8
 USER root
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
     apt-get install -y \
