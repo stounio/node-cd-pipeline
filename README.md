@@ -43,7 +43,7 @@ docker build --no-cache -t jenkins-nodejs .
 docker run -d --restart always -p 8080:8080 -p 50000:50000 jenkins-nodejs
 ```
 
-## Configure jenkins
+## Configure Jenkins for running the Pipeline
 * Install plugins required by the pipeline:
 ..* Pipeline Plugin
 ..* Git Plugin
