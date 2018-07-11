@@ -1,5 +1,5 @@
-var assert = require('assert');
-var app = require('../../main/javascript/hello.js');
+const assert = require('assert');
+const app = require('../../main/javascript/hello.js');
 
 describe('Application', function(){
   describe('hello()', function(){
