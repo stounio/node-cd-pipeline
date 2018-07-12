@@ -45,12 +45,12 @@ docker run -d --restart always -p 8080:8080 -p 50000:50000 jenkins-nodejs
 
 ## Configure Jenkins for running the Pipeline
 * Install plugins required by the pipeline:
-..* Pipeline Plugin
-..* Git Plugin
-..* GitHub
-..* SSH Agent
-..* Config File Provider
-..* Pipeline NPM Integration
+  * Pipeline Plugin
+  * Git Plugin
+  * GitHub
+  * SSH Agent
+  * Config File Provider
+  * Pipeline NPM Integration
 
 * Configure credentials for connecting to git repository (e.g. ssh) with ID GIT_CREDENTIALS.
 * Configure global environment variables GIT_USERNAME and GIT_EMAIL that will be used for setting up the Git repository.
